@@ -1,0 +1,8 @@
+package com.example.employee.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class EmployeeRepository {
+	public interface TutorialRepository extends JpaRepository<Employee, Long>
+}

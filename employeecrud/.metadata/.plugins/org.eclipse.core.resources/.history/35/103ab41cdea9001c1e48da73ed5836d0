@@ -1,0 +1,37 @@
+package com.example.employee.controller;
+
+import org.mockito.InjectMocks;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.example.employee.repository.EmployeeRepository;
+
+/**
+ * The Class CarrierShippingControllerTest.
+ */
+@WebMvcTest(controllers = EmployeeController.class)
+public class EmployeeControllerTest {
+	
+	/** The mock mvc. */
+	@Autowired
+	private MockMvc mockMvc;
+
+	/** The wac. */
+	@Autowired
+	private WebApplicationContext wac;
+	
+	@InjectMocks
+	private EmployeeController employeeController;
+	
+	@MockBean
+	private EmployeeRepository employeeRepository;
+	/**
+	 * Setup.
+	 */
+	@BeforeEach
+	public void setup() {
+		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+		MockitoAnnotations.initMocks(this);
+	}
+
+}

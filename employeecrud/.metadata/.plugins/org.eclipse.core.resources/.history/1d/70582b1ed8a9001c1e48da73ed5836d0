@@ -1,0 +1,22 @@
+package com.example.employee.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.employee.entity.Employee;
+
+public class DataProvider {
+	
+	public List<Employee> getEmployees()
+	{
+	List<Employee> employees=new ArrayList<>();
+	Employee emp=new Employee();
+	emp.setFirst_name("sayali");
+	emp.setLast_name("kurhade");
+	emp.setAge(27);
+	emp.setGender("female");
+	employees.add(emp);
+	return employees;
+	}
+
+}
